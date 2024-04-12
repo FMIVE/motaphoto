@@ -3,3 +3,200 @@ Theme Name: motaphoto
 Author: FM
 Version: 1.0
 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+body {
+    width: 1440px;
+    margin: 0 auto;
+    font-family: "Space Mono", monospace;
+  }
+
+  /* HEADER */
+ #header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0px 4px 14px 10px rgba(0, 0, 0, 0.03); 
+    z-index: 4;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+  .navbar__logo {
+    width: 216px;
+    height: 14px;
+    margin-left: 146px;
+    margin-top: 25px;
+  }
+  .navbar__nav {
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 214px;
+    margin-top: 25px;
+    list-style: none;
+    
+  }
+   .navbar__nav a {
+     color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.7px;
+    text-decoration: none;
+  }
+  .navbar__nav a:hover {
+    font-weight: 700;
+  }
+  
+  /* menu mobile burger*/
+  @keyframes burgerIn {
+    0% {
+      transform: translateY(-130%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(-1%);
+      opacity: 1;
+    }
+  }
+  @media all and (max-width: 700px) {
+    .navbar__nav {
+      display: none;
+    }
+  }
+  @media all and (max-width: 700px) {
+    .navbar__logo {
+      width: 138px;
+      height: 9px;
+      margin-top: 35px;
+    }
+  }
+  /* .burger{
+    height: 800px;
+  } */
+  .burger__menu {
+    position: absolute;
+    /* display: none; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 70px;
+    right: 0;
+    opacity: 1;
+    width: 100%;
+    height:800px !important;
+    background-color: #E00000;
+    padding: 50px;
+    gap: 20px;
+    visibility: visible;
+    list-style: none;
+    transform: translateY(-130%);
+    z-index: 9;
+  }
+  .active .burger__menu {
+    animation: burgerIn 1.5s ease-in-out both;
+  }
+  .burger__btn {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    gap: 8px;
+    width: 40px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    right: 5em;
+    cursor: pointer;
+  }
+  @media all and (max-width: 700px) {
+    .burger__btn {
+      display: flex;
+    }
+  }
+  .burger__btn .line {
+    height: 2px;
+    background-color: #000;
+    display: block;
+    width: 100%;
+    margin: 0;
+    /* transition: all 0.1s ease-in-out; */
+    transition:  0.1s ease-out;
+  }
+  .active .burger__btn .line_1 {
+    transform: rotate(45deg) translate(8px, 6px);
+  }
+  
+  .active .burger__btn .line_2 {
+    opacity: 0;
+  }
+  
+  .active .burger__btn .line_3 {
+    transform: rotate(-45deg) translate(8px, -6px);
+  }
+  
+  
+  /* .burger__menu .navbar__nav {
+    color: white;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 65px;
+    letter-spacing: 0em;
+    text-align: center;
+  } */
+  .burger__menu a {
+    color: white;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 65px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-decoration: none;
+  }
+  @media all and (max-width: 700px) {
+    .burger__menu {
+      display: flex;
+    }
+  }
+
+/* FOOTER */
+#footer{
+  width: 100%;
+    height: 40px;
+    border-top: 0.5px solid #000;
+    align-items: center;
+}
+  .footer__nav {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.footer__nav a{
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.7px;
+    text-decoration: none;
+}
+.footer__nav a:hover{
+  font-weight: 700;
+}
+@media all and (max-width: 700px) {
+  .footer__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
