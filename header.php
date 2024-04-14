@@ -24,6 +24,7 @@
             ])
             ?>
         </nav>
+        <!-- menu mobile responsive -->
         <div class="burger">
             <button id="btn__burger" class="burger__btn" aria-label="Menu portable">
                 <span class="line line_1"></span>
