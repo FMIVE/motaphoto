@@ -7,7 +7,6 @@ Version: 1.0
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 
-
 body {
     width: 1440px;
     margin: 0 auto;
@@ -176,20 +175,26 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: auto;
-}
+  background:rgba(0, 0, 0, 0.75);
+  }
 
 /* Modal Content/Box */
 .modal-content {
-  position:relative;
-  background:white;
-  max-width:600px;
-  width:80%;
-  padding:15px 0;
-  border: 5px solid #000000;
+ background-image: url('assets/images/contact_header.png');
+ background-size:153% ;
+ background-color: white;
+ padding: 20px;
+ border: 1px solid #888;
+ width: 30%;
+ border: solid 5px #000000;
+ background-repeat: no-repeat;
+ background-position: center 2%;
 }
-.modal__logo{
-  width: 100%;
-}
+
+/* .modal__logo{
+ width: 100%!important;
+ } */
+
 @media (max-width: 1100px) {
   .modal-content {
     width: 60%;
