@@ -9,11 +9,6 @@ function motaphoto_register_assets()
     // Déclarer le JS
     wp_enqueue_script('motaphoto', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0', true);
 
-    if (is_single()) {
-        wp_enqueue_script('single_photo', get_template_directory_uri() . '/js/single-photo.js', array('jquery'), '1.0', true);
-    }
-
-    wp_enqueue_script('custom-post-photos', get_template_directory_uri() . '/js/custom-post-photos.js', array('jquery'), '1.0', true);
 
     // wp_enqueue_script('lightbox', get_template_directory_uri() . '/js/lightbox.js', array('jquery'), '1.0', true);
 
@@ -21,9 +16,6 @@ function motaphoto_register_assets()
     wp_enqueue_style('motaphoto', get_template_directory_uri() . '/style.css', array(), '1.0');
 }
 add_action('wp_enqueue_scripts', 'motaphoto_register_assets');
-
-
-
 
 
 function motaphoto_supports()

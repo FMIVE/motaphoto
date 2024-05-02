@@ -11,20 +11,29 @@ btnburger.addEventListener("click", function () {
   burger.classList.toggle("active");
 });
 
-// Get the modal
+// MODALE
+
 var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
 var btn = document.querySelector(".myBtn_modale");
-
-// When the user clicks on the button, open the modal
+var btnContact = document.querySelector(".myBtn-contact-single");
+// ouverture au clic du lien contact du menu, 
 btn.onclick = function() {
     modal.style.display = "flex";
 }
-
-// When the user clicks anywhere outside of the modal, close it
+// et du bouton contact.
+btnContact.onclick = function() {
+    modal.style.display = "flex";
+}
+// ferme la modale au clic
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
+// champ reference
+jQuery(function($){
+    $(document).ready(function(){
+        $("#wpforms-45-field_3").val($('#reference').text()); 
+      });
+    });
+    console.log()
