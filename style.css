@@ -239,47 +239,41 @@ body {
 
 /* page single-photo */
 
-/* .pageArticlePhoto{
 
-} */
+
 .blocPage{
   margin: 0 auto;
   width: 80%;
-  
 }
-.blocPhoto{
+
+.blocContenu{
   display:flex;
   justify-content: space-between;
-  gap: 100px;
   width: 100%;
   margin-top: 38px;
   margin-bottom: 10px;
   font-family: "Space Mono", monospace;
 }
-.blocPhotoDescription{
-  
-  width: 50%;
-  height: 50%;
+.bloc1{  
+  flex:1;
   border-bottom: 1px solid black;
-  align-self: flex-end;
-  padding-bottom: 40px;
-  /* padding-left: 5vw; */
-}
-.blocPhotoImage{
-  display: flex;
-  width: 50%;
-  height: 50%;
-  display: flex;
-  align-self: flex-end;
- }
-.photoImage{ 
   
+  align-self: flex-end;
+  padding-bottom: 40px; 
+  
+}
+.bloc2{   
+  flex:1;
+  align-self: flex-end !important;
+  box-sizing:border-box;
+}
+.photoImage{ 
   align-self: flex-end; 
   max-width: 100%;
-  max-height: 100%;
+  height: auto;
   object-fit: contain;
-   }
-.blocPhoto h1 {
+}
+.blocContenu h1 {
   color: #000;
   font-family: "Space Mono";
   font-size: 66px;

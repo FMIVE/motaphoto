@@ -2,8 +2,8 @@
 
 
 <div class="pagePhoto blocPage">
-    <section class="blocPhoto">
-        <div class="blocPhotoDescription">
+    <div class="blocContenu">
+        <div class="bloc1">
             <h1><?php the_title(); ?></h1>
             <p><span id="reference"><?php echo get_field('reference'); ?></span></p>
             <p>CATÉGORIE : <?php echo strip_tags(get_the_term_list($post->ID, 'categories_photos')); ?></p>
@@ -11,14 +11,11 @@
             <p><?php echo get_field('type'); ?></p>
             <p>ANNÉE : <?php echo get_the_date('Y'); ?></p>
         </div>
-        <div class="blocPhotoImage>
-        <?php
-        $photoId = get_field('photo');
-        echo wp_get_attachment_image($photoId, 'medium_large');
-        ?>
-        <img class=" photoImage" src=" <?php the_post_thumbnail_url(); ?>">
+        <div class="bloc2">
+            <img class=" photoImage" src=" <?php the_post_thumbnail_url(); ?>">
         </div>
-    </section>
+    </div>
+
     <div class="articleBandeau">
         <div class="articleBandeauContact">
             <p>Cette photo vous intéresse ?
@@ -38,5 +35,7 @@
         </div>
     </div>
 </div>
+
+
 
 <?php get_footer(); ?>
