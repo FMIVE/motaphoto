@@ -1,4 +1,4 @@
-<?php get_template_part('template_parts/contactModale'); ?>
+<?php get_template_part('templates_part/contactModale'); ?>
 
 <footer id="footer">
     <?php

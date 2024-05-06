@@ -163,7 +163,7 @@ body {
     }
   }
 
-/* The Modal (background) */
+/* MODALE */
 .modal {
   display:none;
   align-items: center;
@@ -177,8 +177,6 @@ body {
   overflow: auto;
   background:rgba(0, 0, 0, 0.75);
   }
-
-/* Modal Content/Box */
 .modal-content {
  background-image: url('assets/images/contact_header.png');
  background-size:153% ;
@@ -191,7 +189,7 @@ body {
  background-position: center 2%;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
   .modal-content {
     width: 60%;
   }
@@ -203,7 +201,6 @@ body {
 }
 .wpforms-form {
   display: flex;
-  
   flex-direction: column;
   align-items: center;
 }
@@ -239,13 +236,10 @@ body {
 
 /* page single-photo */
 
-
-
 .blocPage{
   margin: 0 auto;
   width: 80%;
-}
-
+}  
 .blocContenu{
   display:flex;
   justify-content: space-between;
@@ -254,24 +248,48 @@ body {
   margin-bottom: 10px;
   font-family: "Space Mono", monospace;
 }
+@media (max-width: 550px) {
+  .blocContenu{     
+    flex-direction: column-reverse;   
+    width: 100%;  
+  }
+}
 .bloc1{  
   flex:1;
-  border-bottom: 1px solid black;
-  
+  border-bottom: 1px solid black;  
   align-self: flex-end;
-  padding-bottom: 40px; 
-  
+  padding-bottom: 40px;   
+}
+@media (max-width: 550px) {
+  .bloc1{
+    width: 80%;
+    padding: 10%;     
+    align-items:flex-start;
+    gap: 15px;
+    font-size:13vw;    
+  }  
 }
 .bloc2{   
   flex:1;
-  align-self: flex-end !important;
+  align-self: flex-end ;
   box-sizing:border-box;
+}
+@media (max-width: 550px) {
+  .bloc2{
+    width: 100%;
+    height: auto;
+  }
 }
 .photoImage{ 
   align-self: flex-end; 
   max-width: 100%;
   height: auto;
   object-fit: contain;
+}
+@media (max-width: 550px) {      
+  .photoImage{
+   width: 100%; 
+ }
 }
 .blocContenu h1 {
   color: #000;
@@ -282,9 +300,13 @@ body {
   line-height: 58px; 
   text-transform: uppercase;
 }
-
+@media (max-width: 550px) {
+  .blocContenu h1{
+    font-size:22vw ;
+  }
+}
 /* cette photo vous interesse */
-.articleBandeau {
+.bandeauMiniSlider {
   height: 120px;
   display: flex;
   justify-content: space-between;
@@ -292,23 +314,20 @@ body {
   width: 100%;
   padding-bottom: 20px;
 }
-.articleBandeauContact {
+.bandeauContact{
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 50%;
 }
 @media (max-width: 800px) {
-  .articleBandeauContact {
+  .bandeauContact {
     height:135px;
     justify-content: space-evenly;
     width:100%;
     flex-direction: column;
-   
-   
   }
 }
-
  .myBtn-contact-single {
   border: none;
   border-radius: 2px;
@@ -317,77 +336,143 @@ body {
   font-size: 12px;
   font-family: "SpaceMono-Regular";
   font-weight: 400;
-  transition: background-color 1s;
- 
+  transition: background-color 1s; 
+}
+@media (max-width: 800px) {
+  .myBtn-contact-single {
+    font-size:26px;
+    font-weight: 600;
+  }
 }
 .myBtn-contact-single:hover {
   background-color: black;
   color: white;
 }
-.articleBandeauNav {
+.bandeauSlider {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   width: 81px;
 }
 @media (max-width: 800px) {
-  .articleBandeauNav {
+  .bandeauSlider {
     display: none;
   }
 }
-.articleBandeauNavThumbnailContainer img {
+.bandeauContainer img {
   height: 71px;
   width: 81px;
   object-fit: cover;
 }
-.articleBandeauNavThumbnailContainer .photo-suivante {
+.bandeauContainer .photo-suivante {
   display: none;
 }
-.articleBandeauNavThumbnailContainer .photo-precedente {
+.bandeauContainer .photo-precedente {
   display: none;
 }
-.articleBandeauNavArrow {
+.bandeauArrow {
   display: flex;
   justify-content: space-between;
 }
-.articleBandeauNavArrow img {
+.bandeauArrow img {
   display: block;
 }
 
-
-
-
-
-
-
-
+/* photos Apparentées */
+.photoApparentees {
+  width: 80%;
+  margin-left: 146px;
+  margin-right: 146px;
+}
+.photoApparenteesTitre {
+  font-family: "Space Mono";
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  margin-bottom: 52px;
+  margin-top: 70px;
+}
+.photoApparenteesBloc {
+  display: flex;
+  flex-direction: column;
+}
+/* -------------template photo_block--------- */
+.sectionPhotoBlock {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  justify-content: space-between;
+}
 @media (max-width: 550px) {
-  .blocPhoto{
-    flex-wrap:wrap-reverse;
+  .blocImage {
     display: flex;
-    padding: 0 20px;
-    margin: -5px;
+    justify-content: center;
     width: 100%;
   }
-     
-  .blocPhotoDescription{
-    width: 80%;
-    padding: 10%;
-   
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
-  .photoArticle{
-    width: 80%;
-   padding: 10%;
+}
+.blocImage {
+  width: 49%;
+  position: relative;
+  aspect-ratio: 1/1;
+  margin-bottom: 1.4%;
+}
+@media (max-width: 550px) {
+  .blocImage {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 }
-
-
-
-
+.blocImageThumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blocImageEye {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 46px;
+  height: 31.2px;
+}
+.blocImageFullscreen {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 18px;
+  margin-top: 11px;
+}
+.blocImageInfo {
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+.blocImageInfo p {
+  color: white;
+  font-family: "SpaceMono-Regular";
+  text-transform: uppercase;
+  margin-left: 23px;
+  margin-right: 23px;
+}
+.blocPicto {
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.348);
+  opacity: 0;
+  aspect-ratio: 1/1;
+  transition: opacity 0.5s;
+}
+.blocPicto:hover {
+  opacity: 1;
+}
+/* fin template photo_block */
 
 /* FOOTER */
 #footer{
@@ -395,13 +480,12 @@ body {
     height: 40px;
     border-top: 0.5px solid #000;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 110px;
 }
 .footer__nav {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
-
 }
 .footer__nav a{
     color: #000;

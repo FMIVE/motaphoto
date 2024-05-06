@@ -11,12 +11,12 @@ btnburger.addEventListener("click", function () {
   burger.classList.toggle("active");
 });
 
-// MODALE
-
+//      MODALE        //
 var modal = document.getElementById('myModal');
 var btn = document.querySelector(".myBtn_modale");
 var btnContact = document.querySelector(".myBtn-contact-single");
-// ouverture au clic du lien contact du menu, 
+
+// Ouverture au clic du lien contact du menu, 
 btn.onclick = function() {
     modal.style.display = "flex";
 }
@@ -24,13 +24,13 @@ btn.onclick = function() {
 btnContact.onclick = function() {
     modal.style.display = "flex";
 }
-// ferme la modale au clic
+// ferme la modale au clic sur la page
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
-// champ reference
+// champ reference de la modale
 jQuery(function($){
     $(document).ready(function(){
         $("#wpforms-45-field_3").val($('#reference').text()); 
