@@ -474,6 +474,37 @@ body {
 }
 /* fin template photo_block */
 
+/* hero */
+.hero {
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size:100%;
+  background-repeat: no-repeat;
+  background-position: center;
+     }
+.hero h1 {
+  align-self: center;  
+  font-family: "Space Mono", monospace;
+  font-style: italic;
+  font-size: 6vw;
+  text-transform: uppercase;
+  text-shadow: 3px 0 #fff, -3px 0 #fff, 0 3px #fff, 0 -3px #fff, 3px 3px #fff, -3px -3px #fff, 3px -3px #fff, -3px 3px #fff;
+  mix-blend-mode: lighten;
+}
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size:12vw;
+  }
+}
+@media (max-width: 550px) {
+  .hero h1 {
+    font-size:24vw;
+  }
+}
+
+
 /* FOOTER */
 #footer{
   width: 100%;
