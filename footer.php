@@ -1,6 +1,5 @@
-<?php get_template_part('templates_part/contactModale'); ?>
-
 <footer id="footer">
+    <?php get_template_part('templates_part/contactModale'); ?>
     <?php
     wp_nav_menu([
         'theme_location' => 'footer',
@@ -8,10 +7,12 @@
         'menu_class' => 'footer__nav'
     ])
     ?>
+
+
 </footer>
 <?php wp_footer() ?>
+<!-- <script src="wp-content/themes/motaphoto/js/script.js"></script> -->
 
-<script src="wp-content/themes/motaphoto/js/script.js"></script>
 </body>
 
 </html>

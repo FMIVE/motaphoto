@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+
 <div class="pagePhoto blocPage">
     <div class="blocContenu">
         <div class="bloc1">
@@ -48,7 +49,7 @@
                 'post__not_in' => [get_the_ID()],
                 'post_type' => 'photo',
                 'posts_per_page' => 2,
-                'paged' => 1, //ajout pour ajax
+                'paged' => 1,
                 'orderby' => 'rand',
                 'tax_query' => [
                     [
@@ -75,9 +76,6 @@
         </div>
     </div>
 </section>
-
-
-
 
 
 <?php get_footer(); ?>

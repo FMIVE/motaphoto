@@ -36,7 +36,7 @@ function get_random_background_image()
         while ($photo_query->have_posts()) {
             $photo_query->the_post();
             // Récupère l'URL de l'image mise en avant
-            $photo_url = get_the_post_thumbnail_url(get_the_ID(['class' => 'heroImage']), 'full-screen');
+            $photo_url = get_the_post_thumbnail_url(get_the_ID(), 'full-screen');
         }
         // Réinitialise les données post
         wp_reset_postdata();
@@ -45,3 +45,11 @@ function get_random_background_image()
     return $photo_url;
 }
 ?>
+<!-- template catalogue photos et photo block-->
+<section class="photoApparentees">
+    <div class="photoApparenteesBloc">
+        <?php get_template_part('templates_part/catalogue_photos'); ?>
+    </div>
+</section>
+
+<?php get_footer(); ?>
