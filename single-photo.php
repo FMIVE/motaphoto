@@ -76,6 +76,6 @@
         </div>
     </div>
 </section>
-
+<?php get_template_part('templates_part/lightbox'); ?>
 
 <?php get_footer(); ?>
