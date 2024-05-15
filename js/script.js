@@ -50,7 +50,45 @@ jQuery(function($){
     });
 
  });
+
 // ______________________________________________________________
 // CHARGER PLUS
 
+jQuery(document).ready(function($) {
+    var canBeLoaded = true; // cette variable est utilisée pour éviter plusieurs appels AJAX
+
+    $('#load-more').on('click', function() {
+        var button = $(this);
+        var finMessage = $('#fin-message');
+        var data = {
+            'action': 'load_more_photos',
+            'page': load_more_params.current_page
+        };
+
+        if (canBeLoaded) {
+            $.ajax({
+                url: load_more_params.ajaxurl,
+                data: data,
+                type: 'POST',
+                beforeSend: function(xhr) {
+                    // canBeLoaded = false; // éviter plusieurs appels AJAX
+                    button.text('Chargement...'); // changer le texte du bouton pendant le chargement
+                },
+                success: function(data) {
+                    if (data.trim() != '0') {
+                        $('#photo-container').append(data); // Ajouter les nouvelles photos
+                        load_more_params.current_page++;
+                        canBeLoaded = true; // Permettre un nouvel appel AJAX
+                        button.text('Charger plus'); // réinitialiser le texte du bouton
+                    }else {
+                        button.hide(); // Cacher le bouton
+                        finMessage.show(); // Afficher le message
+                        }
+                }
+                
+            });
+        }
+    });
+});
+// ______________________________________________________
 

@@ -611,6 +611,26 @@ body {
   transform: scaleY(0);
   transform-origin: 0 0;
 }
+.home__filter-open .home__filter__content {
+  opacity: 1;
+  transform: scaleY(1);
+}
+.home__filter__content__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.home__filter__content__list__option {
+  padding: 11px 24px;
+  cursor: pointer;
+}
+.home__filter__content__list__option strong {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.36px;
+}
+
 
 
 /* LIGHTBOX */

@@ -121,6 +121,7 @@ function get_random_background_image()
         </div>
     </section>
 
+
     <!-- template lightbox -->
     <?php get_template_part('templates_part/lightbox'); ?>
 
